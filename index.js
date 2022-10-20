@@ -1,5 +1,8 @@
 // Add your code here
-
+const ul = document.createElement('ul');
+ul.id = 'newID'
+const body = document.querySelector('body')
+body.append(ul)
 
 const form = document.querySelector("form")
 // console.log(form);
@@ -19,15 +22,21 @@ form.addEventListener("submit", (e)=> {
             "Accept": "application/json",
         },
         body: JSON.stringify(newDogObject),
-    }
-    .then (response => response.json()),
-    .then 
-    );
+    })
+    .then (response => response.json())
+    .then (userObject => applyUsersToDOM(userObject))
 
     form.reset();
 }
 );
 
+
+function applyUsersToDOM(userObject) {
+    const li = document.createElement('li')
+    li.textContent = userObject.dogName
+    ul.append(li)
+    
+}
 
 
 
