@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="index.js"></script>
     <title>JavaScript Lab</title>
   </head>
 
   <body>
-    <script src="index.js"></script>
+    
+    <h1>Sample Form</h1>
+
+    <form action="http://localhost:3000/dogs" method="POST">
+      <label> Dog Name: <input type="text" name="dogName" id="dogName" /></label><br />
+      <label> Dog Breed: <input type="text" name="dogBreed" id="dogBreed" /></label><br />
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+
   </body>
 
 </html>
